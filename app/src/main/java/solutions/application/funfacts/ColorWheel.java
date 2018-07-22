@@ -4,6 +4,8 @@ import android.graphics.Color;
 
 import java.util.Random;
 
+import static solutions.application.funfacts.FunFactsActivity.previousColors;
+
 public class ColorWheel {
 
     //Fields or Member Variables - Properties about the object
@@ -33,7 +35,16 @@ public class ColorWheel {
         Random randomGenerator = new Random();
         int randomNumber = randomGenerator.nextInt(colors.length);
         int color = Color.parseColor(colors[randomNumber]);
+        previousColors.add(color);
         return color;
+    }
+
+    int getPreviousColor(){
+       //get previous fact color scheme
+        int n = previousColors.size();
+        n -= 1;
+        int prevColor = previousColors.get(n);
+        return prevColor;
     }
 
 }

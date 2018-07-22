@@ -12,9 +12,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:text="@string/did_you_know"
         android:textColor="#80ffffff"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:id="@+id/textView" />
 
     <TextView
         android:id="@+id/factTextView"
@@ -32,9 +35,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="72dp"
         android:background="@android:color/white"
         android:text="@string/show_another_fun_fact"
+        android:textColor="#51b46d" />
+
+    <Button
+        android:id="@+id/previousFactButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/white"
+        android:text="Previous"
         android:textColor="#51b46d" />
 
 </RelativeLayout>

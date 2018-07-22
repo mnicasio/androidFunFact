@@ -3,6 +3,8 @@ package solutions.application.funfacts;
 
 import java.util.Random;
 
+import static solutions.application.funfacts.FunFactsActivity.factNumbers;
+
 class FactBook {
     //Fields or Member Variables - Properties about the object
     private final String[] facts = {
@@ -20,12 +22,24 @@ class FactBook {
 
     // Methods - Actions the object can take
 
+
     String getFact() {
 
         //Randomly select a fact
             Random randomGenerator = new Random();
             int randomNumber = randomGenerator.nextInt(facts.length);
+            factNumbers.add(randomNumber);
             return facts[randomNumber];
-        }
 
+        }
+    String getPreviousFact(){
+        //select the previous fact
+     int n = factNumbers.size();
+        n -= 1;
+        int x = factNumbers.get(n);
+        return facts[x];
     }
+}
+
+
+
